@@ -18,7 +18,7 @@ export default function Hero() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -27,17 +27,17 @@ export default function Hero() {
 
   const slides = [
     {
-      image: '/placeholder.svg?height=400&width=800',
+      image: '/images/image_hero1.jpg?height=400&width=800',
       title: 'Chào mừng đến với Câu Lạc Bộ của chúng tôi',
       description: 'Nơi kết nối đam mê và phát triển bản thân',
     },
     {
-      image: '/placeholder.svg?height=400&width=800',
+      image: '/images/image_hero3.jpg?height=400&width=800',
       title: 'Khám phá tiềm năng của bạn',
       description: 'Cùng nhau học hỏi và phát triển',
     },
     {
-      image: '/placeholder.svg?height=400&width=800',
+      image: '/images/image_hero2.jpg?height=400&width=800',
       title: 'Tham gia ngay hôm nay',
       description: 'Bắt đầu hành trình của bạn với chúng tôi',
     },
@@ -48,7 +48,7 @@ export default function Hero() {
       {sliderLoaded ? (
         <Slider {...settings}>
           {slides.map((slide, index) => (
-            <div key={index} className="relative h-[400px]">
+            <div key={index} className="relative h-[700px]">
               <Image
                 src={slide.image}
                 alt={slide.title}
@@ -57,10 +57,10 @@ export default function Hero() {
                 priority={index === 0}
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <div className="text-center">
+                <div className="text-center px-4">
                   <h1 className="text-4xl font-bold mb-4">{slide.title}</h1>
                   <p className="text-xl mb-8">{slide.description}</p>
-                  <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold text-lg hover:bg-gray-100">
+                  <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300">
                     Tìm hiểu thêm
                   </button>
                 </div>
@@ -69,7 +69,7 @@ export default function Hero() {
           ))}
         </Slider>
       ) : (
-        <div className="h-[400px] flex items-center justify-center">
+        <div className="h-[600px] flex items-center justify-center">
           <p>Loading slider...</p>
         </div>
       )}

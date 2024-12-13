@@ -8,30 +8,30 @@ export default function Header() {
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-4">
                         <Image
-                            src="/images/logo.png" // Make sure to add your logo file in the public folder
-                            alt="Logo"
+                            src="/images/logo.png"
+                            alt="Logo Câu lạc bộ"
                             width={50}
                             height={50}
                             className="rounded-full"
                         />
                         <div className="flex flex-col">
-                            <span className="text-sm font-bold text-[#2eb1f2] leading-tight font-montserrat uppercase">
+                            <span className="text-sm font-semibold text-gray-800 leading-tight">
                                 Hội sinh viên Trường Đại học Kiên Giang
                             </span>
-                            <span className="text-sm font-bold text-[#2eb1f2] leading-tight font-montserrat uppercase">
-                               <strong> Câu lạc bộ Truyền thông và Máy tính</strong>
+                            <span className="text-sm font-semibold text-gray-800 leading-tight">
+                                Câu lạc bộ Truyền thông và Máy tính
                             </span>
                         </div>
                     </div>
                     <div className="flex space-x-4 items-center">
-                        <Link href="#about" className="text-[#2eb1f2] hover:text-[#0239a8]">
+                        <Link href="#about" className="text-blue-800 hover:text-gray-600">
                             Giới thiệu
                         </Link>
-                        <Link href="#activities" className="text-[#2eb1f2] hover:text-[#0239a8]">
+                        <Link href="#activities" className="text-blue-800 hover:text-gray-600">
                             Hoạt động
                         </Link>
-                        <Link href="/register" className="text-[#2eb1f2] hover:text-[#0239a8]">
-                            Đăng ký
+                        <Link href="/auth" className="text-blue-800 hover:text-gray-600">
+                            Đăng nhập / Đăng ký
                         </Link>
                     </div>
                 </div>
